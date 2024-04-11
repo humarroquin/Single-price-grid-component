@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+:root {
+  --bg-body: hsl(204, 43%, 93%);
+  --bg-turquoise: hsl(171, 39%, 40%);
+  --bg-light-turquoise: hsl(161, 51%, 57%);
+  --bg-green: hsl(115, 51%, 57%);
+  --bg-white: hsl(0, 0%, 100%);
+
+  --ff-body: 'Karla', sans-serif;
+  --ff-headers: 'Karla', sans-serif;
+  --fc-light-turquoise: hsl(161, 51%, 57%);
+  --fc-turquoise: hsl(171, 39%, 40%);
+  --fc-white: hsl(0, 0%, 100%);
+  --fc-light-gray: hsl(218, 22%, 67%);
+}
+
+/* general styling */
+body {
+  font-family: var(--ff-body);
+  font-weight: 400;
+  line-height: 1.6;
+  background: var(--bg-body);
+}
+
+.container {
+  margin: 2rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: hsl(218, 22%, 67%) 0px 7px 29px 0px;
+}
+
+.container .section {
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.section .header {
+  font-family: var(--ff-headers);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* join */
+.join-title {
+  color: var(--fc-turquoise);
+}
+
+.join-guarantee {
+  font-size: 1.125rem;
+  color: var(--fc-light-turquoise);
+}
+
+.join-description {
+  color: var(--fc-light-gray);
+}
+
+/* subscription */
+.subscription-section {
+  background: var(--bg-turquoise);
+  color: var(--fc-white);
+}
+
+.subscription-price {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: -0.9rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.subscription-price .faded-text {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.subscription-text {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  border: none;
+  padding: 0.9375rem;
+  border-radius: 0.5rem;
+  font-size: inherit;
+  color: inherit;
+  background: var(--bg-green);
+  font-weight: 500;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+  background: transparent;
+  outline: 1.5px solid var(--bg-white);
+}
+
+/* why us */
+.why-us-section {
+  background: var(--bg-light-turquoise);
+  color: var(--fc-white);
+}
+
+.section-list {
+  list-style: none;
+  opacity: 0.9;
+}
+
+.list-items:not(:last-child) {
+  margin-bottom: 0.2rem;
+}
+
+/* media queries */
+@media (min-width: 35rem) {
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+  }
+  .container {
+    max-width: 45rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .join-section {
+    grid-column: span 2;
+  }
+}
