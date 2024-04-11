@@ -54,6 +54,10 @@ body {
 }
 
 /* join */
+.join-section {
+  background: var(--bg-white);
+}
+
 .join-title {
   color: var(--fc-turquoise);
 }
